@@ -60,6 +60,7 @@ class GoodWeApi:
                 result['pgrid_w'] += inverterData['out_pac']
                 result['grid_voltage'] += self.parseValue(inverterData['output_voltage'], 'V')
                 result['pv_voltage'] += self.calcPvVoltage(inverterData['d'])
+                result['temperature'] = inverterData['tempperature']
                 count += 1
             result['eday_kwh'] += inverterData['eday']
             result['etotal_kwh'] += inverterData['etotal']
